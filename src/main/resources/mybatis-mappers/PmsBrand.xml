@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bjtu.mall.dao.PmsBrandDao">
+
+    <update id="updatePointBrand">
+        update pms_brand
+        <set>
+            <if test="name != null">
+                name = #{name},
+            </if>
+            <if test="firstLetter != null">
+                first_letter = #{firstLetter},
+            </if>
+            <if test="sort != null">
+                sort = #{sort},
+            </if>
+            <if test="factoryStatus != null">
+                factory_status = #{factoryStatus},
+            </if>
+            <if test="showStatus != null">
+                show_status = #{showStatus},
+            </if>
+            <if test="productCount != null">
+                product_count = #{productCount},
+            </if>
+            <if test="productCommentCount != null">
+                product_comment_count = #{productCommentCount},
+            </if>
+            <if test="logo != null">
+                logo = #{logo},
+            </if>
+            <if test="bigPic != null">
+                big_pic = #{bigPic},
+            </if>
+            <if test="brandStory != null">
+                brand_story = #{brandStory},
+            </if>
+        </set>
+        where id = #{id}
+    </update>
+</mapper>

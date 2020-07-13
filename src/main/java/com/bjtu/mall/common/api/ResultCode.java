@@ -1,7 +1,5 @@
 package com.bjtu.mall.common.api;
 
-import lombok.Data;
-
 /**
  * 枚举了一些常用API操作码
  *

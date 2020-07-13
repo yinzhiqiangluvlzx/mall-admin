@@ -179,8 +179,7 @@
     <!-- 多环境配置管理 -->
     <!--开发环境:打印控制台-->
     <springProfile name="dev">
-        <root level="info">
-            <!--<logger name="com.nmys.view" level="debug"/>-->
+        <root level="debug">
             <appender-ref ref="CONSOLE"/>
             <appender-ref ref="DEBUG_FILE"/>
             <appender-ref ref="INFO_FILE"/>
