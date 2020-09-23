@@ -2,7 +2,6 @@ package com.bjtu.mall.dao;
 
 import com.bjtu.mall.model.UmsAdmin;
 import org.apache.ibatis.annotations.*;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 
 /**
  * @author yinzhiqiang

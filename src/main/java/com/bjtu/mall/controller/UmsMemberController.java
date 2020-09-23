@@ -16,19 +16,19 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/sso")
 public class UmsMemberController {
     @Autowired
-    private UmsMemberService memberService;
+    private UmsMemberService umsMemberService;
 
     @ApiOperation("获取验证码")
     @GetMapping(value = "/getAuthCode")
     public CommonResult getAuthCode(@RequestParam String telephone) {
-        return memberService.generateAuthCode(telephone);
+        return umsMemberService.generateAuthCode(telephone);
     }
 
     @ApiOperation("判断验证码是否正确")
     @PostMapping(value = "/verifyAuthCode")
     public CommonResult updatePassword(@RequestParam String telephone,
                                        @RequestParam String authCode) {
-        return memberService.verifyAuthCode(telephone, authCode);
+        return umsMemberService.verifyAuthCode(telephone, authCode);
     }
 
 }
